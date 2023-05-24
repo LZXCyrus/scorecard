@@ -1,6 +1,6 @@
 # scorecard
 
-中文文档：
+中文文档：https://lzxcyrus.github.io/scorecard-report/
 
 This is a project that use scorecard to assess the credit risk of the loan users. 
 
