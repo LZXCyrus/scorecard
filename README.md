@@ -14,4 +14,6 @@ sklearn==1.2.2
 
 scorecardbundle
 
-- support installation via pip:`pip install --upgrade scorecardbundle`
+support installation via pip:
+
+`pip install --upgrade scorecardbundle`
