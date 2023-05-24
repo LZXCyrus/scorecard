@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  4 16:23:54 2022
-
-@author: Cyrus.L
-"""
-
 from sklearn.svm import SVC
 from sklearn.linear_model import Perceptron
 from sklearn import datasets
@@ -33,21 +26,20 @@ model = RandomForestClassifier(
         bootstrap=True,
         oob_score=False, n_jobs=1, 
         random_state=None, verbose=0,
-        warm_start=False, class_weight=None)  # 实例化模型RandomForestClassifier
-model.fit(X_train, Y_train)  # 在训练集上训练模型
-print(model)  # 输出模型RandomForestClassifier
+        warm_start=False, class_weight=None)
+model.fit(X_train, Y_train) 
+print(model) 
 from sklearn.metrics import roc_curve, auc
-# 在测试集上测试模型
-expected = Y_test  # 测试样本的期望输出
+expected = Y_test 
 y_pred1 = model.predict(X_test)
 from pylab import mpl
-mpl.rcParams['font.sans-serif'] = ['Microsoft YaHei'] # 指定默认字体：解决plot不能显示中文问题
+mpl.rcParams['font.sans-serif'] = ['Microsoft YaHei'] 
 mpl.rcParams['axes.unicode_minus'] = False
 
 
 y_pred1 = model.predict_proba(X_test)[:, 1]
 fpr_Nb, tpr_Nb, _ = roc_curve(Y_test,y_pred1)
-aucval = auc(fpr_Nb, tpr_Nb)    # 计算auc的取值
+aucval = auc(fpr_Nb, tpr_Nb)    
 plt.figure(figsize=(10,8))
 plt.plot([0, 1], [0, 1], 'k--')
 plt.plot(fpr_Nb, tpr_Nb,"r",linewidth = 3)
