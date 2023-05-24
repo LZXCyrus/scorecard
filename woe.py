@@ -8,7 +8,6 @@ def optimal_binning_boundary(x: pd.Series, y: pd.Series, nan: float = -99999) ->
         利用决策树获得最优分箱的边界值列表
     '''
     boundary = []  # 待return的分箱边界值列表
-
     x = x.fillna(nan).values  # 填充缺失值
     y = y.values
 
