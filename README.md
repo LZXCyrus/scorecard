@@ -4,7 +4,7 @@
 
 This is a project that use scorecard to assess the credit risk of the loan users. 
 
-**woe.py** and **iv.py** are for variable selection of data. **scorecard.py** is the main code of socrecard model. After variable selection, run scorecard.py on the new data. You can also run **randomforest.py** to compare the performance of Random Forest and Scorecard model in this project.
+**woe.py** and **iv.py** are for variable selection of data. **scorecard.py** is the main code of socrecard model. After variable selection, run scorecard.py on the new data. You can also run **randomforest.py** to compare the performance of Random Forest and Scorecard model in this project. Data has been masked.
 
 ## Enviroment
 
